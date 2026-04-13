@@ -72,3 +72,10 @@ def bfs_min_moves(board):
 
                 # add to queue with +1 move (one dice throw used)
                 queue.append((next_cell, moves + 1))
+                
+# The system IS:
+
+# ✔ solving a problem dynamically
+# ✔ generating a new puzzle
+# ✔ computing correct solution
+# ✔ mixing it into options
