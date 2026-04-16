@@ -229,7 +229,7 @@ name_frame = tk.Frame(root, bg=BG_DARK)
 tk.Label(name_frame, text="SNAKE & LADDER\nMASTER", font=("Impact", 42), bg=BG_DARK, fg=GOLD).pack(pady=30)
 name_entry = tk.Entry(name_frame, font=("Segoe UI", 16), justify='center', bg=BG_LIGHT, fg="white", insertbackground="white", bd=0)
 name_entry.pack(pady=20, ipady=10, ipadx=10)
-create_styled_button(name_frame, "ENTER KINGDOM", start_game, SUCCESS).pack()
+create_styled_button(name_frame, "Enter Your Name", start_game, SUCCESS).pack()
 name_frame.pack(pady=100)
 
 # Size Selection
