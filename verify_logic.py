@@ -19,10 +19,10 @@ def verify_logic():
 
     # Final Validation
     if moves_bfs == 3 and moves_dijk == 3:
-        print("\n✅ SUCCESS: Both algorithms identified the optimal 3-move path.")
+        print("\nSUCCESS: Both algorithms identified the optimal 3-move path.")
         print(f"BFS Path Trace: {path_bfs}")
     else:
-        print("\n❌ FAILED: Algorithm mismatch or incorrect calculation.")
+        print("\nFAILED: Algorithm mismatch or incorrect calculation.")
 
 if __name__ == "__main__":
     verify_logic()
