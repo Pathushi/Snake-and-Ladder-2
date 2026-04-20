@@ -6,6 +6,9 @@ from game_logic import bfs_min_moves, dijkstra_min_moves
 import random
 import math
 
+# --------------
+# Pathushi
+# ------------
 # --- MODERN COLOR PALETTE ---
 ACCENT = "#3498db"      # Bright Blue
 SUCCESS = "#2ecc71"     # Emerald Green
@@ -76,6 +79,11 @@ def draw_asset(start, end, type):
         canvas.create_oval(x1-10, y1-10, x1+10, y1+10, fill="#27ae60", outline="white")
         canvas.create_oval(x1-4, y1-4, x1-1, y1-1, fill="white")
         canvas.create_oval(x1+1, y1-4, x1+4, y1-1, fill="white")
+        
+
+#--------------------
+#Sayuni
+#--------------------
 
 # -------------------- CORE LOGIC --------------------
 
@@ -150,6 +158,10 @@ def draw_board():
     for s, e in board.snakes.items(): draw_asset(s, e, "snake")
     draw_player()
     board_frame.pack(pady=20)
+    
+#--------------------
+#Pathushi
+#--------------------
 
 def draw_player():
     global player_token
@@ -215,12 +227,17 @@ def show_final_result():
     # Check prediction logic
     if user_guess == correct_answer:
         result_label.config(text=f"TOTAL VICTORY!\nPrediction correct & reached the end!", fg=SUCCESS)
-        # Requirement: Save to DB with times for both algorithms
+        # Save to DB with times for both algorithms
         save_winner(player_name, correct_answer, board.size, algo_perf["bfs"], algo_perf["dijkstra"])
     else:
         result_label.config(text=f"MISSED IT!\nShortest path was {correct_answer}", fg=DANGER)
         
     result_frame.pack(pady=20)
+    
+    
+#---------------------
+#Sayuni
+#---------------------
 
 # -------------------- UI COMPONENTS --------------------
 

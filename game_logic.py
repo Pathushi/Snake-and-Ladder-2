@@ -2,6 +2,7 @@ import time
 import heapq
 from collections import deque
 
+# Pathushi
 def bfs_min_moves(board):
     start_time = time.perf_counter()
     queue = deque([(1, [])]) 
@@ -25,6 +26,7 @@ def bfs_min_moves(board):
                     queue.append((temp, path + [dice]))
     return 0, [], 0
 
+# Sayuni
 def dijkstra_min_moves(board):
     start_time = time.perf_counter()
     # (moves_count, current_cell)
@@ -40,7 +42,6 @@ def dijkstra_min_moves(board):
 
         if cell == board.total_cells:
             end_time = time.perf_counter()
-            # Note: Dijkstra finds count; for the path we rely on BFS for the UI "forced" move
             return moves, (end_time - start_time)
 
         for dice in range(1, 7):
